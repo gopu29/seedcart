@@ -1,0 +1,30 @@
+<style>
+  .NavSeller{
+    width: 70px;
+    width: 100%;
+    background-color: black;
+  }
+</style>
+<body>
+
+    <div class="NavSeller">
+      <h1 style="text-align: center;color:white"><b><i>WELCOME TO SELLER DASHBOARD</i></b></h1>
+    </div>
+
+  <div class="container" style="width: 500px;margin-top:50px;border:2px solid black;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+    <h1 style="text-align: center;">Login</h1>
+    <form action="/seller/userLogin" method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-outline-success">LOGIN</button> <a href="/seller/register" class="btn btn-outline-danger"> REGISTER</a>
+  <br><br>
+</form>
+</div>
+</body>

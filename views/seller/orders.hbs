@@ -1,0 +1,39 @@
+{{> sellerNav}}
+
+
+<div class="container">
+    <div class="card mb-3" style="max-width:50%;">
+  <div class="row g-0  ">
+      {{#each product}}
+    <div class="col-md-4 cart"  style="margin-top: 10px;">
+      <img style="height:100%;" src="/images/product/{{this.Image}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8 cart"  style="margin-top: 10px;">
+      <div class="card-body">
+        <h5 class="card-title">{{this.Product_name}}</h5>
+        <p class="card-text">{{this.Description}}</p>
+        <h6>Price:{{this.Price}}</h6>
+        <h6><b>Status</b>:{{this.status}}</h6>
+        <h6><b>user email</b>:{{this.email}}</h6>
+        <h6><b>amount</b>:{{this.amount}}.Rs. <b>Payed</b></h6>
+     
+        <a href="/seller/placeOrder/{{this.id}}/{{this.email}}" class="btn btn-outline-secondary">Plce order</a>
+        <a href="/seller/shipped/{{this.id}}/{{this.email}}" class="btn btn-outline-warning">Shipped</a>
+        <a href="/seller/deliver/{{this.id}}/{{this.email}}" class="btn btn-outline-success">Deliver today</a>
+        {{!-- <h6 class="card-title">Quantity:{{this.qnty}}</h6> --}}
+{{!--         
+        <a class="btn btn-primary" href="/users/qnty_decrement/{{this.Id}}" role="button">-</a>
+        <a class="btn btn-primary" href="/users/qnty_increment/{{this.Id}}" role="button">+</a>
+        <a class="btn btn-warning" href="/users/buynow/{{this.id}}/{{this.Price}}/{{this.qnty}}" role="button">Buy Now</a>
+        <a class="btn btn-danger" href="/users/remove/{{this.Id}}" role="button">Remove</a> --}}
+
+      </div>
+    </div>
+   
+    {{/each}}
+  </div>
+</div>
+</div>
+
+
+
